@@ -7,20 +7,110 @@
     <x>0</x>
     <y>0</y>
     <width>912</width>
-    <height>421</height>
+    <height>410</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">.QTableWidget{
+	background-color: transparent;
+	filter: blur(8px);
+}
+
+QDialog{
+background-color: white;
+background-image: url(&quot;UI/img/5262941.jpg&quot;)  no-repeat center cover;
+}</string>
+  </property>
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>130</y>
-     <width>711</width>
-     <height>192</height>
+     <x>80</x>
+     <y>150</y>
+     <width>751</width>
+     <height>201</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget{
+	border : none;
+	background-color: transparent;
+	border-top-right-radius : 15px;
+	border-top-left-radius: 15px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+
+}
+QHeaderView {
+    background-color: #FFD880;
+	border-top-right-radius : 15px;
+	border-top-left-radius: 15px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+QHeaderView::section{
+	background-color: #FFD880;
+	border: none;
+	font-size: 14px;
+	color : #666666;
+}
+QHeaderView::section::first{
+	 border-top-left-radius : 15px;
+}
+QHeaderView::section::last{
+	border-top-right-radius : 15px;
+}
+
+QTableWidget::item{
+	font-size : 14px;
+	font-family : &quot;Sitka Text&quot;;
+	color : #666666;
+	text-align : center;
+}
+
+QTableWidget::item:selected{
+	color : white;
+	background-color : #FFB100;
+}
+QScrollBar::vertical{
+	background-color: white;
+	width: 15px;
+   margin-top: 34px;
+	margin-left : 5px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+     height : 0px;
+	 width : 0px;
+ }
+
+QScrollBar::handle:vertical{
+	width : 15px;
+	background: #FFD880;
+	border-radius : 4px;
+}
+QScrollBar::horizontal{
+	background-color: white;
+	margin-top: 5px;
+	height: 15px;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+     height : 0px;
+	 width : 0px;
+ }
+
+QScrollBar::handle:horizontal{
+	height : 15px;
+	background: #FFD880;
+	border-radius : 4px;
+}
+
+QAbstractScrollArea::corner{
+	background: transparent;
+}</string>
    </property>
    <property name="selectionMode">
     <enum>QAbstractItemView::SingleSelection</enum>
@@ -60,13 +150,29 @@
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 25 12pt &quot;Bahnschrift Light&quot;;
-font-size : 15px;
-border : none;
-border-bottom : 2px solid rgb(120, 82, 169);
-background-color: rgb(255, 255,255);
-color :rgb(45, 45, 45);
-padding-bottom : 7px;</string>
+    <string notr="true">QLineEdit{
+border: 2px solid #FFD880;
+border-radius : 15px;
+background-color: white;
+color : #FFB100;
+font-size: 18px;
+font-family : &quot;Sitka Text&quot;;
+}
+QComboBox::down-arrow {
+    image: url(&quot;./image/arrowBasO.png&quot;);	
+	color : #FFB100;
+	right : 4px;
+}
+QComboBox::drop-down{
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: white;
+}
+QComboBox QAbstractItemView{
+	border: 2px solid #FEC1C1;
+	border-radius : 15px;
+	padding : 4px;
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -78,11 +184,25 @@ padding-bottom : 7px;</string>
   <widget class="QPushButton" name="ok">
    <property name="geometry">
     <rect>
-     <x>640</x>
+     <x>700</x>
      <y>350</y>
-     <width>93</width>
-     <height>28</height>
+     <width>121</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover{
+	color: white;
+	background-color: #FFB100;
+}
+QPushButton{
+border: 1.4px solid #FFF6CC;
+border-radius : 14px;
+background-color: white;
+color : #FFB100;
+font-size:18px;
+font-family : &quot;Sitka Text&quot;;
+}</string>
    </property>
    <property name="text">
     <string>Ok</string>
@@ -91,11 +211,25 @@ padding-bottom : 7px;</string>
   <widget class="QPushButton" name="ajouter">
    <property name="geometry">
     <rect>
-     <x>530</x>
+     <x>560</x>
      <y>350</y>
-     <width>93</width>
-     <height>28</height>
+     <width>121</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover{
+	color: white;
+	background-color: #FFB100;
+}
+QPushButton{
+border: 1.4px solid #FFF6CC;
+border-radius : 14px;
+background-color: white;
+color : #FFB100;
+font-size:18px;
+font-family : &quot;Sitka Text&quot;;
+}</string>
    </property>
    <property name="text">
     <string>Ajouter</string>
@@ -104,11 +238,25 @@ padding-bottom : 7px;</string>
   <widget class="QPushButton" name="Re">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>280</x>
      <y>350</y>
-     <width>93</width>
-     <height>28</height>
+     <width>121</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover{
+	color: white;
+	background-color: #FFB100;
+}
+QPushButton{
+border: 1.4px solid #FFF6CC;
+border-radius : 14px;
+background-color: white;
+color : #FFB100;
+font-size:18px;
+font-family : &quot;Sitka Text&quot;;
+}</string>
    </property>
    <property name="text">
     <string>Reinitialiser</string>
@@ -119,9 +267,23 @@ padding-bottom : 7px;</string>
     <rect>
      <x>420</x>
      <y>350</y>
-     <width>93</width>
-     <height>28</height>
+     <width>121</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover{
+	color: white;
+	background-color: #FFB100;
+}
+QPushButton{
+border: 1.4px solid #FFF6CC;
+border-radius : 14px;
+background-color: white;
+color : #FFB100;
+font-size:18px;
+font-family : &quot;Sitka Text&quot;;
+}</string>
    </property>
    <property name="text">
     <string>Supprimer</string>
@@ -132,9 +294,16 @@ padding-bottom : 7px;</string>
     <rect>
      <x>70</x>
      <y>30</y>
-     <width>161</width>
+     <width>221</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	font-family : &quot;Sitka Text&quot;;
+	font-size: 18px;
+	color : #2A1E4E;
+}</string>
    </property>
    <property name="text">
     <string>Poid Maximal du sac</string>
@@ -145,12 +314,43 @@ padding-bottom : 7px;</string>
     <rect>
      <x>70</x>
      <y>110</y>
-     <width>161</width>
-     <height>16</height>
+     <width>271</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	font-family : &quot;Sitka Text&quot;;
+	font-size: 18px;
+	color : #2A1E4E;
+}</string>
+   </property>
    <property name="text">
-    <string>Objets disponible</string>
+    <string>Objets disponible dans la table</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Deco">
+   <property name="geometry">
+    <rect>
+     <x>860</x>
+     <y>10</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-image: url(&quot;UI/img/croixR.png&quot;);
+	background-repeat : no-repeat;
+	background-color : white;
+	border : none;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

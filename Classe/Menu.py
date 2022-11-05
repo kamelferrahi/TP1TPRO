@@ -4,17 +4,26 @@ from PyQt5.uic import loadUi
 from .AjoutObjets import AjoutObjets
 from .AlgorithmeduSac import ProblemeduSac
 from .Resultat import Resultat
+from PySide2 import QtWidgets
+from PySide2.QtWidgets import QHeaderView
 
 class Menu(QDialog):
     def __init__(self):
         super(Menu, self).__init__()
+        fermerSignal = pyqtSignal()
         loadUi("UI/Menu.ui",self)
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.ok.clicked.connect(self.Executer)
         self.ajouter.clicked.connect(self.Ajouter)
         self.Re.clicked.connect(self.Reinialiter)
         self.supprimer.clicked.connect(self.suppression)
+        self.Deco.clicked.connect(self.close)
         self.Objets = list()
+        self.tableWidget.verticalHeader().setVisible(False)
+        self.tableWidget.setColumnWidth(0,400)
+        self.tableWidget.setColumnWidth(1,200)
+        self.tableWidget.setColumnWidth(3,200)
+        
 
     def Ajouter(self):
         self.window = AjoutObjets()
@@ -45,7 +54,7 @@ class Menu(QDialog):
             self.window = Resultat(sac,res[0])
             self.window.show()
         except:
-            self.messagebox("Erreur","Le poid maximal doit étre spécifié et doit etre un entier")
+            self.erreur("Erreur","Le poid maximal doit étre spécifié et doit etre un entier")
     
     def Reinialiter(self):
         self.Objets = list()
@@ -63,11 +72,40 @@ class Menu(QDialog):
             self.tableWidget.setItem(i,0,QTableWidgetItem(objet["nom"]))
             i+=1
     
-    def messagebox(self,title,message):
-
-        mess = QMessageBox()
-        mess.setWindowTitle(title)
-        mess.setText(message)
-        mess.setStandardButtons(QMessageBox.Ok)
-        mess.exec_()  
+    def erreur(self,title,message):
+        msg = QMessageBox()
+        msg.setWindowTitle(title)
+        msg.setWindowFlag(0x00000800)
+        msg.setText(message)
+        msg.setStyleSheet('''QMessageBox{
+                                          border: 3px solid #FF5051;
+                                          background : white;
+                                          border-radius: 15px;
+                                          width : 288px;
+                                          height : 131px;
+                                          }
+                                          QPushButton{
+                                          background-color : white;
+                                          width : 53px;
+                                          height : 28px;
+                                          border: 1px solid #FF5051;
+                                          border-radius : 15px;   
+                                          color : #FF5051;
+                                          font-family:"Sitka Text";
+                                          font-size : 13px;                             
+                                           }
+                                          QPushButton:hover{
+                                          background-color: #FF5051;
+                                          color : white;
+                                          }
+                                          QLabel{
+                                          font-family: "Sitka Text";
+                                          font-size : 13px;
+                                          color : #666666;
+                                          width : 192px;
+                                          height : 32px;
+                                           }''')
+        msg.setStandardButtons(QMessageBox.Ok)
+        msg.setIcon(QMessageBox.Critical)
+        msg.exec_()  
 

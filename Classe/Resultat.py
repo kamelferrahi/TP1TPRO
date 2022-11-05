@@ -12,6 +12,10 @@ class Resultat(QDialog):
         self.cout = cout
         self.loadData()
         self.ok.clicked.connect(self.close)
+        self.tableWidget.verticalHeader().setVisible(False)
+        self.tableWidget.setColumnWidth(0,400)
+        self.tableWidget.setColumnWidth(1,200)
+        self.tableWidget.setColumnWidth(3,200)
 
     def loadData(self):
         self.label.setText("Cout = "+str(self.cout))
@@ -23,3 +27,5 @@ class Resultat(QDialog):
             self.tableWidget.setItem(i,2,QTableWidgetItem(str(objet["valeur"])))
             self.tableWidget.setItem(i,0,QTableWidgetItem(objet["nom"]))
             i+=1
+
+    

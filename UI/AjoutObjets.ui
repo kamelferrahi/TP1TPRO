@@ -13,6 +13,13 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+
+	background-color: white
+
+}</string>
+  </property>
   <widget class="QLineEdit" name="nom">
    <property name="geometry">
     <rect>
@@ -29,13 +36,29 @@
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 25 12pt &quot;Bahnschrift Light&quot;;
-font-size : 15px;
-border : none;
-border-bottom : 2px solid rgb(120, 82, 169);
-background-color: rgb(255, 255,255);
-color :rgb(45, 45, 45);
-padding-bottom : 7px;</string>
+    <string notr="true">QLineEdit{
+border: 2px solid #FFD880;
+border-radius : 15px;
+background-color: white;
+color : #FFB100;
+font-size: 18px;
+font-family : &quot;Sitka Text&quot;;
+}
+QComboBox::down-arrow {
+    image: url(&quot;./image/arrowBasO.png&quot;);	
+	color : #FFB100;
+	right : 4px;
+}
+QComboBox::drop-down{
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: white;
+}
+QComboBox QAbstractItemView{
+	border: 2px solid #FEC1C1;
+	border-radius : 15px;
+	padding : 4px;
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -60,13 +83,29 @@ padding-bottom : 7px;</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 25 12pt &quot;Bahnschrift Light&quot;;
-font-size : 15px;
-border : none;
-border-bottom : 2px solid rgb(120, 82, 169);
-background-color: rgb(255, 255,255);
-color :rgb(45, 45, 45);
-padding-bottom : 7px;</string>
+    <string notr="true">QLineEdit{
+border: 2px solid #FFD880;
+border-radius : 15px;
+background-color: white;
+color : #FFB100;
+font-size: 18px;
+font-family : &quot;Sitka Text&quot;;
+}
+QComboBox::down-arrow {
+    image: url(&quot;./image/arrowBasO.png&quot;);	
+	color : #FFB100;
+	right : 4px;
+}
+QComboBox::drop-down{
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: white;
+}
+QComboBox QAbstractItemView{
+	border: 2px solid #FEC1C1;
+	border-radius : 15px;
+	padding : 4px;
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -91,13 +130,29 @@ padding-bottom : 7px;</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 25 12pt &quot;Bahnschrift Light&quot;;
-font-size : 15px;
-border : none;
-border-bottom : 2px solid rgb(120, 82, 169);
-background-color: rgb(255, 255,255);
-color :rgb(45, 45, 45);
-padding-bottom : 7px;</string>
+    <string notr="true">QLineEdit{
+border: 2px solid #FFD880;
+border-radius : 15px;
+background-color: white;
+color : #FFB100;
+font-size: 18px;
+font-family : &quot;Sitka Text&quot;;
+}
+QComboBox::down-arrow {
+    image: url(&quot;./image/arrowBasO.png&quot;);	
+	color : #FFB100;
+	right : 4px;
+}
+QComboBox::drop-down{
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: white;
+}
+QComboBox QAbstractItemView{
+	border: 2px solid #FEC1C1;
+	border-radius : 15px;
+	padding : 4px;
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -110,10 +165,24 @@ padding-bottom : 7px;</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>320</y>
-     <width>93</width>
-     <height>28</height>
+     <y>310</y>
+     <width>121</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover{
+	color: white;
+	background-color: #FFB100;
+}
+QPushButton{
+border: 1.4px solid #FFF6CC;
+border-radius : 14px;
+background-color: white;
+color : #FFB100;
+font-size:18px;
+font-family : &quot;Sitka Text&quot;;
+}</string>
    </property>
    <property name="text">
     <string>Ajouter</string>
@@ -123,10 +192,24 @@ padding-bottom : 7px;</string>
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>320</y>
-     <width>93</width>
-     <height>28</height>
+     <y>310</y>
+     <width>121</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover{
+	color: white;
+	background-color: #FFB100;
+}
+QPushButton{
+border: 1.4px solid #FFF6CC;
+border-radius : 14px;
+background-color: white;
+color : #FFB100;
+font-size:18px;
+font-family : &quot;Sitka Text&quot;;
+}</string>
    </property>
    <property name="text">
     <string>Annuler</string>
@@ -136,10 +219,17 @@ padding-bottom : 7px;</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>30</y>
+     <y>40</y>
      <width>55</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	font-family : &quot;Sitka Text&quot;;
+	font-size: 18px;
+	color : #2A1E4E;
+}</string>
    </property>
    <property name="text">
     <string>Nom</string>
@@ -149,10 +239,17 @@ padding-bottom : 7px;</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>120</y>
+     <y>130</y>
      <width>55</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	font-family : &quot;Sitka Text&quot;;
+	font-size: 18px;
+	color : #2A1E4E;
+}</string>
    </property>
    <property name="text">
     <string>Poid</string>
@@ -166,6 +263,13 @@ padding-bottom : 7px;</string>
      <width>55</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	font-family : &quot;Sitka Text&quot;;
+	font-size: 18px;
+	color : #2A1E4E;
+}</string>
    </property>
    <property name="text">
     <string>Valeur</string>

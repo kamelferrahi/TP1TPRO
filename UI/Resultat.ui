@@ -13,14 +13,104 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">.QTableWidget{
+	background-color: transparent;
+	filter: blur(8px);
+}
+
+QDialog{
+background-color: white;
+background-image: url(&quot;UI/img/5262941.jpg&quot;)  no-repeat center cover;
+}</string>
+  </property>
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>90</y>
-     <width>711</width>
-     <height>192</height>
+     <y>110</y>
+     <width>751</width>
+     <height>201</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget{
+	border : none;
+	background-color: transparent;
+	border-top-right-radius : 15px;
+	border-top-left-radius: 15px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+
+}
+QHeaderView {
+    background-color: #FFD880;
+	border-top-right-radius : 15px;
+	border-top-left-radius: 15px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+QHeaderView::section{
+	background-color: #FFD880;
+	border: none;
+	font-size: 14px;
+	color : #666666;
+}
+QHeaderView::section::first{
+	 border-top-left-radius : 15px;
+}
+QHeaderView::section::last{
+	border-top-right-radius : 15px;
+}
+
+QTableWidget::item{
+	font-size : 14px;
+	font-family : &quot;Sitka Text&quot;;
+	color : #666666;
+	text-align : center;
+}
+
+QTableWidget::item:selected{
+	color : white;
+	background-color : #FFB100;
+}
+QScrollBar::vertical{
+	background-color: white;
+	width: 15px;
+   margin-top: 34px;
+	margin-left : 5px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+     height : 0px;
+	 width : 0px;
+ }
+
+QScrollBar::handle:vertical{
+	width : 15px;
+	background: #FFD880;
+	border-radius : 4px;
+}
+QScrollBar::horizontal{
+	background-color: white;
+	margin-top: 5px;
+	height: 15px;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+     height : 0px;
+	 width : 0px;
+ }
+
+QScrollBar::handle:horizontal{
+	height : 15px;
+	background: #FFD880;
+	border-radius : 4px;
+}
+
+QAbstractScrollArea::corner{
+	background: transparent;
+}</string>
    </property>
    <property name="selectionMode">
     <enum>QAbstractItemView::SingleSelection</enum>
@@ -49,9 +139,16 @@
     <rect>
      <x>270</x>
      <y>350</y>
-     <width>111</width>
+     <width>231</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	font-family : &quot;Sitka Text&quot;;
+	font-size: 18px;
+	color : #2A1E4E;
+}</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
@@ -62,9 +159,23 @@
     <rect>
      <x>590</x>
      <y>350</y>
-     <width>93</width>
-     <height>28</height>
+     <width>121</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover{
+	color: white;
+	background-color: #FFB100;
+}
+QPushButton{
+border: 1.4px solid #FFF6CC;
+border-radius : 14px;
+background-color: white;
+color : #FFB100;
+font-size:18px;
+font-family : &quot;Sitka Text&quot;;
+}</string>
    </property>
    <property name="text">
     <string>Ok</string>
@@ -73,14 +184,21 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>60</y>
+     <x>50</x>
+     <y>70</y>
      <width>371</width>
-     <height>16</height>
+     <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	font-family : &quot;Sitka Text&quot;;
+	font-size: 18px;
+	color : #2A1E4E;
+}</string>
+   </property>
    <property name="text">
-    <string>Objets dans le sac</string>
+    <string>Objets pris dans le sac pour un cout optimal</string>
    </property>
   </widget>
  </widget>
